@@ -17,7 +17,10 @@ from typing import Any, Callable
 from nptyping import NDArray
 
 import instanseg.metrics.constants
-from instanseg.utils.metrics_utils import __group_indices_by_labels, __statistics_functions
+from instanseg.utils.metrics_utils import (
+    __group_indices_by_labels,
+    __statistics_functions,
+)
 
 
 def __mean(
