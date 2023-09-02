@@ -57,7 +57,9 @@ def test_full_instances_with_matching(clean_env):
     gt_prev = np.asarray([3, 0, 1, 1, 2, 2])
 
     assert 1 == pytest.approx(
-        matched_instances_ratio_with_matching(pred, pred_cur, pred_prev, gt_cur, gt_prev)
+        matched_instances_ratio_with_matching(
+            pred, pred_cur, pred_prev, gt_cur, gt_prev
+        )
     )
 
 
@@ -69,7 +71,9 @@ def test_removed_instances_with_matching(clean_env):
     gt_prev = np.asarray([3, 0, 1, 1, 2, 2])
 
     assert 1 == pytest.approx(
-        matched_instances_ratio_with_matching(pred, pred_cur, pred_prev, gt_cur, gt_prev)
+        matched_instances_ratio_with_matching(
+            pred, pred_cur, pred_prev, gt_cur, gt_prev
+        )
     )
 
 
@@ -81,7 +85,9 @@ def test_wrong_detected_instances_with_matching_influence_metrics(clean_env):
     gt_prev = np.asarray([0, 3, 0, 1, 1, 2, 2])
 
     assert 0.75 == pytest.approx(
-        matched_instances_ratio_with_matching(pred, pred_cur, pred_prev, gt_cur, gt_prev)
+        matched_instances_ratio_with_matching(
+            pred, pred_cur, pred_prev, gt_cur, gt_prev
+        )
     )
 
 
@@ -93,5 +99,7 @@ def test_wrong_not_detected_instances_with_matching(clean_env):
     gt_prev = np.asarray([3, 0, 1, 1, 2, 2])
 
     assert 1 == pytest.approx(
-        matched_instances_ratio_with_matching(pred, pred_cur, pred_prev, gt_cur, gt_prev)
+        matched_instances_ratio_with_matching(
+            pred, pred_cur, pred_prev, gt_cur, gt_prev
+        )
     )
