@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "evops"
+name = "instanseg"
 version = "0.0.0"
 description = "Evaluation of Plane Segmentation."
 authors = ["Pavel Mokeev", "Dmitriy Jarosh"]
 license = "APACHE"
 readme = "README.md"
-homepage = "https://evops.netlify.app/"
-repository = "https://github.com/MobileRoboticsSkoltech/evops"
+homepage = "https://instanseg.netlify.app/"
+repository = "https://github.com/prime-slam/instanseg-metrics"
 
 [tool.poetry.dependencies]
 python = "^3.7.1"
