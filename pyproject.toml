@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "instanseg"
 version = "0.0.0"
-description = "Evaluation of Plane Segmentation."
-authors = ["Pavel Mokeev", "Dmitriy Jarosh"]
+description = "Evaluation of Instance Segmentation."
+authors = ["Pavel Mokeev", "Dmitriy Jarosh", "Anastasiia Kornilova", "Arthur Saliou"]
 license = "APACHE"
 readme = "README.md"
-homepage = "https://instanseg.netlify.app/"
+homepage = "https://prime-slam.github.io/instanseg-metrics/"
 repository = "https://github.com/prime-slam/instanseg-metrics"
 
 [tool.poetry.dependencies]

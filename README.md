@@ -11,32 +11,29 @@
 
 <ul style="font-size: 14pt;">
     <li>Summary segmentation metrics <ul style="font-size: 14pt;">
-        <li><a href="https://prime-slam.github.io/evops-metrics/instance_based/panoptic">Panoptic</a></li>
-        <li><a href="https://prime-slam.github.io/evops-metrics/full_statistics/full_statistics">Full statistics</a></li>
+        <li>Panoptic</li>
+        <li>Full statistics</li>
     </ul></li>
     <li>Instance-based segmentation metrics
         <ul style="font-size: 14pt;">
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/precision">Precision</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/recall">Recall</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/fScore">F-Score</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/usr">Under segmented ratio</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/osr">Over segmented ratio</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/noise">Noise ratio</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/instance_based/missed">Missed ratio</a></li>
+            <li>Precision</li>
+            <li>Recall</li>
+            <li>F-Score</li>
+            <li>Under segmented ratio</li>
+            <li>Over segmented ratio</li>
+            <li>Noise ratio</li>
+            <li>Missed ratio</li>
     </ul></li>
     <li>Point-based segmentation metrics
         <ul style="font-size: 14pt;">
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/point_based/iou">Intersection over Union (IoU)</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/point_based/dice">Dice</a></li>
-            <li><a href="https://prime-slam.github.io/evops-metrics/#/metrics/point_based/mean">Mean of some metric for matched instances</a></li>
+            <li>Intersection over Union (IoU)</li>
+            <li>Dice</li>
+            <li>Mean of some metric for matched instances</li>
     </ul></li>
 </ul>
 
 <p style="font-size: 14pt;">
-    For more, please visit the <a href="https://prime-slam.github.io/evops-metrics">Instanseg documentation</a>.
-</p>
-<p style="font-size: 14pt;">
-    You can also find full information about the project on the <a href="https://evops.netlify.app/">Instanseg project website</a>.
+    For more, please visit the <a href="https://prime-slam.github.io/instanseg-metrics/">Instanseg documentation</a>.
 </p>
 
 # Python quick start
@@ -69,6 +66,7 @@ $ pip show instanseg
 ```
 
 # Citation
+Package is based on metrics package evops provided in the paper:
 ```
 @misc{kornilova2022evops,
       title={EVOPS Benchmark: Evaluation of Plane Segmentation from RGBD and LiDAR Data}, 
