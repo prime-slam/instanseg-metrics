@@ -1,0 +1,83 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'EVOPS'
+theme = "universal"
+defaultContentLanguage = "en"
+googleAnalytics = "G-6ED0DBMYB3"
+
+# number of words of summarized post content (default 70)
+summaryLength = 70
+
+# Define the number of posts per page
+paginate = 10
+
+[params.carouselHomepage]
+    enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
+
+[params]
+    style = "default"
+    viewMorePostLink = "/datasets/"
+    date_format = "January 2, 2006"
+    disabled_logo = true
+    logo_text = "EVOPS"
+    about_us = ""
+
+    contact_url = "/paper/"
+    address = """<p class="text-uppercase"><strong>Mobile Robotics Lab. Skoltech,</strong>
+                 <strong> Russia</strong>
+                 </p>
+                 <p><strong><a href="https://sites.skoltech.ru/mobilerobotics/">Lab Official Page</a></strong></p>
+          """
+
+[permalinks]
+    datasets = "/datasets/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
+    name       = "Dataset"
+    identifier = "menu.dataset"
+    url        = "/dataset/"
+    weight     = 2
+
+[[menu.main]]
+    name       = "Metrics"
+    identifier = "menu.metrics"
+    url        = "/metrics/"
+    weight     = 3
+
+[[menu.main]]
+    name       = "Evaluation"
+    identifier = "menu.evaluation"
+    url        = "/evaluation/"
+    weight     = 4
+
+[[menu.main]]
+    name       = "Tools"
+    identifier = "menu.tools"
+    url        = "/tools/"
+    weight     = 4
+
+[[menu.main]]
+    name       = "Paper"
+    identifier = "menu.paper"
+    url        = "/paper/"
+    weight     = 6
+
+[params.features]
+    enable = true
+    cols = 3
+
+[params.footer.recent_posts]
+    enable = false
+
+[params.widgets]
+    categories = true
+    tags = true

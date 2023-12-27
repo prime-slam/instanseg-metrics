@@ -1,0 +1,52 @@
+<div class="container" id="somepage">
+  <div class="col-md-12">
+    <p class="lead" style="text-align: center; font-weight: bold; font-size: 24px; margin-bottom: 12px;">
+      {{ .Description | markdownify }}
+    </p>
+    <div style="text-align: center; font-size: 15.5px; margin-bottom: 20px;">
+      We provide labeled sequences for famous odometry and SLAM benchmark containing 3D data.
+    </div>
+
+    <div class="row">
+      {{ $posts := .Site.GetPage "/data/" }}
+      {{ range first 4 $posts.Pages }}
+      <div class="col-md-3 col-sm-6">
+        <div class="box-image-text blog">
+          <div class="top">
+            <div style="font-size: 16px; font-weight: bold; margin-bottom: 10px; height: 60px;">
+              {{ .Params.title }}
+            </div>
+            <div class="image" style="overflow:hidden">
+              {{ if isset .Params "banner" }}
+              <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" >
+              {{ else }}
+              <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="">
+              {{ end }}
+            </div>
+          </div>
+
+          <div class="content">
+            <p class="author-category">
+              {{ if .Params.date }}
+              {{ $createdAt := .Date.Format .Site.Params.date_format }}
+              {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+              {{ $createdAt = replace $createdAt $month (i18n $month) }}
+              {{ end }}
+              {{ i18n "publishedOn" }} {{ $createdAt }}
+              {{ end }}
+            </p>
+            {{ if not .Site.Params.recent_posts.hide_summary }}
+            <p class="intro" style="height: 70px;">{{ .Summary }}</p>
+            <p class="read-more">
+              <a href="{{.Params.link}}" class="btn btn-template-main">{{ i18n "Download" }}</a>
+            </p>
+            {{ end }}
+          </div>
+        </div>
+        <!-- /.box-image-text -->
+
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

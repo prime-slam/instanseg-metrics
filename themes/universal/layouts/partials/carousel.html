@@ -1,0 +1,47 @@
+{{ if default true .Site.Params.CarouselHomepage.enable }}
+{{ if gt (len .Site.Data.carousel) 0 }}
+<section>
+    <div class="home-carousel">
+        <div class="dark-mask"></div>
+        <div class="container">
+            <div class="homepage owl-carousel"
+                data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
+                data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
+                data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
+                {{ range sort .Site.Data.carousel "weight" }}
+                <div class="item">
+                    {{ if .href }}
+                    <a href="{{ .href }}">
+                    {{ end }}
+                        <div class="row">
+                            <div class="col-sm-5 right">
+                                <h1>{{ .title }}</h1>
+                                {{ .description | safeHTML }}
+                            </div>
+                            <div class="col-sm-7">
+                                <h4 style="margin-top: 70px;
+                                           color: white;
+                                           font-weight: 430;
+                                           font-size: 16px;
+                                           padding-bottom: 150px;
+                                           word-spacing: 5px;
+                                           text-align: left;
+                                           width: 500px;">
+                                    Our framework provides a dataset with labeled planes in RGBD and LIDAR data from famous odometry and SLAM benchmarks. 
+                                    We accompany the dataset with a pip-package containing instance segmentation metrics adopted for planes. 
+                                    Additionally, we report evaluation of existing plane segmentation algorithms using our data and metrics.
+                                </h4>
+                            </div>
+                        </div>
+                    {{ if .href }}
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <!-- /.project owl-slider -->
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

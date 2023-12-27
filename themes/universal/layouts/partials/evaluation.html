@@ -1,0 +1,30 @@
+<div class="container" id="evaluation">
+
+    <div class="row col-md-12">
+        <div style="text-align: left; font-size: 17px; padding-bottom: 50px;">
+            In the course of the work, various algorithms were evaluated on our data. 
+            Our evaluation list includes the following algorithms:
+            <a href="https://arxiv.org/abs/1803.02380">CAPE</a>,
+            <a href="https://ieeexplore.ieee.org/document/6907776">PEAC</a>,
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lqjRbXgAAAAJ&sortby=pubdate&citation_for_view=lqjRbXgAAAAJ:p__nRnzSRKYC">modified region growing</a>,
+            <a href="https://hal.archives-ouvertes.fr/hal-02490721/document">automatic extraction of multi-scale structures</a>,
+            <a href="http://ais.uni-bonn.de/papers/IAS_2012_Holz.pdf">Region Growing (PCL library implementation)</a>,
+            <a href="https://cs.gmu.edu/~kosecka/ICRA2013/spme13_trevor.pdf ">Connected Components (PCL library implementation)</a>.
+
+            The quality of algorithm was evaluated on our labeled <a href="/dataset">dataset</a> using our <a href="/metrics">pip-package</a> for metrics.
+            </p>
+
+            <h4 style="font-size: 17px;">Try algorithms</h4>
+
+            All considered algorithms were wrapped up in docker containers and available in our 
+            <a href="https://github.com/prime-slam/plane-detection-dockers">repository</a>.
+            Below, examples of running algorithms on our data are demonstrated.
+        </div>
+        <div style="text-align: center;">
+            <img src="{{ .Params.image }}" style="width:100%; height: 100%; padding-bottom: 100px;">
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+
+{{ partial "map.html" . }}

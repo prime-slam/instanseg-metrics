@@ -1,0 +1,9 @@
+weight: 4
+title: "EVOPS"
+description: >
+  <ul class="list-style-none">
+    <li>Evaluation of plane</li>
+    <li>Segmentation on 3d data</li>
+  </ul>
+  <input type="button" class="btn btn-template-main" value="Download" onclick="window.location='/dataset/';">
+image: ""

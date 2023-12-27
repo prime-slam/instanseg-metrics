@@ -1,0 +1,39 @@
+<div class="container" id="contact">
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <section>
+
+                <div>
+                    <div style="padding-bottom: 10px">
+                        <p class="metrics-text" style="padding-bottom: 14px">
+                            Pip package that implements instance segmentation metrics adopted to planes. It can be used to evaluate the quality of the algorithms.
+                        </p>
+
+                        <p class="metrics-text">
+                            Library can be installed using the <a href="https://pypi.org/project/pip/"></a>pip</a> package manager.
+
+                            {{ .Content }}
+
+                        </p>
+                    </div>
+
+                    <div class="download-buttons">
+                        <a href="https://github.com/prime-slam/evops-metrics" class="btn btn-template-main metrics-button">GitHub</a>
+                        <a href="https://prime-slam.github.io/evops-metrics" class="btn btn-template-main metrics-button">Documentation</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="col-md-3" style="text-align: center;">
+            <img src="{{ .Params.logo }}" style="width:100%; height: 100%; padding-bottom: 40px;">
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+
+{{ partial "map.html" . }}

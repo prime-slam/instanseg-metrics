@@ -1,0 +1,5 @@
+weight: 3
+name: "Evaluation"
+icon: "fab fa-docker"
+url: "/evaluation/"
+description: "Performance of existing plane segmentation algorithms on our data"

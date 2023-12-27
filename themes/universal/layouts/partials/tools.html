@@ -1,0 +1,54 @@
+<div class="container" id="contact">
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <section>
+                <p class="lead" style="text-align: left; font-weight: bold; font-size: 24px; margin-bottom: 12px;">
+                    Dataset format
+                </p>
+
+                <div style="text-align: left; font-size: 17px; padding-bottom: 15px;">
+                    We provide annotation data for both RGBD and LIDAR data.
+                    Each point from image or point cloud is segmented as belonging to one of the planes or being not planar. 
+                </div>
+
+                <p class="lead" style="text-align: left; font-weight: bold; font-size: 20px; margin-bottom: 12px;">
+                    RGBD
+                </p>
+
+                <div style="text-align: left; font-size: 17px; padding-bottom: 15px;">
+                    Annotation for RGBD data is represented by colored images with the same size as the raw depth images from the original dataset. 
+                    Color of the pixel describes its planarity and identifies the plane it belongs to. 
+                    We use black color ([0, 0, 0]) as a mark of not planar pixels. 
+                    Moreover, our annotations are associated between consecutive frames, so each plane has one and only one color which its pixels can have.
+                </div>
+
+                <p class="lead" style="text-align: left; font-weight: bold; font-size: 20px; margin-bottom: 12px;">
+                    LIDAR
+                </p>
+
+                <div style="text-align: left; font-size: 17px; padding-bottom: 15px;">
+                    Annotation for LiDaR data is saved as an appropriately named numpy format file (.npy) where one file describes one cloud of the same name from the original dataset sequence. 
+                    Annotation file contains an array of integers. Its size is equal to the amount of points in the respective point cloud and integer in the position i is plain id for point at the same position in the point cloud file. 
+                    While 0 is used as an id for not planar points, other positive integers are used as unique identifiers of the plane along the whole sequence.
+                </div>
+
+<!--                <p class="lead" style="text-align: left; font-weight: bold; font-size: 20px; margin-bottom: 12px;">-->
+<!--                    Annotation read examples-->
+<!--                </p>-->
+
+<!--                <div style="text-align: left; font-size: 17px; padding-bottom: 15px;">-->
+<!--                    We also provide two examples scripts for reading data from our annotation format and point cloud construction -->
+<!--                    where each point is colored with its plane unique color.-->
+<!--                </div>-->
+
+            </section>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+
+{{ partial "map.html" . }}
